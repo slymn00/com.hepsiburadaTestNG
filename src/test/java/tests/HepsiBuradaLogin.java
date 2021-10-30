@@ -147,7 +147,7 @@ public class HepsiBuradaLogin extends TestBaseRapor {
 
         ReusableMethods.waitFor(3);
         Assert.assertTrue(hepsiburadaHomePage.homePageGirisYap.isDisplayed());
-        extentTest.info("Cikis yapildigi kontrol edildi");
+        extentTest.pass("Cikis yapildigi kontrol edildi,Test PASSED");
 
 
 

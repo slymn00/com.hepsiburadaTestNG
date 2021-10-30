@@ -45,18 +45,18 @@ public class HepsiBuradaLogin extends TestBaseRapor {
 
         ReusableMethods.waitFor(2);
         hepsiburadaHomePage.searchBox.sendKeys(ConfigReader.getProperty("aranan_kelime"));
-        extentTest.info("aranmasi belirlenen kelime searchbox'ta arandi");
+        extentTest.info("Aranmasi belirlenen kelime searchbox'ta arandi");
         ReusableMethods.waitFor(1);
         hepsiburadaHomePage.ara.click();
-        extentTest.info("ara butonuna basildi");
+        extentTest.info("Ara butonuna basildi");
         hepsiburadaHomePage.telefonDropdown.click();
-        extentTest.info("soldaki menuden telefon secildi");
+        extentTest.info("Soldaki menuden telefon secildi");
         ReusableMethods.waitFor(3);
         hepsiburadaHomePage.ceptelefonu.click();
-        extentTest.info("soldaki menuden cep telefonu secildi");
+        extentTest.info("Soldaki menuden cep telefonu secildi");
         System.out.println(hepsiburadaHomePage.samsungDogrulama.getText());
         Assert.assertTrue(hepsiburadaHomePage.samsungDogrulama.getText().contains("samsung"));
-        extentTest.pass("expected result ile actual result karsilastirildi, Test PASSED");
+        extentTest.info("Expected result ile actual result karsilastirildi");
         ReusableMethods.waitFor(3);
         Actions actions=new Actions(Driver.getDriver());
         actions.sendKeys(Keys.PAGE_DOWN)
@@ -67,10 +67,10 @@ public class HepsiBuradaLogin extends TestBaseRapor {
                 .perform();
         ReusableMethods.waitFor(2);
         actions.moveToElement(hepsiburadaHomePage.yirmiAltinciUrun).perform();
-        extentTest.info("yirmi altinci urunun uzerine gelindi");
+        extentTest.info("Yirmi altinci urunun uzerine gelindi");
         ReusableMethods.waitFor(2);
         hepsiburadaHomePage.begenButonu.click();
-        extentTest.info("urun detayindaki begen butonuna tiklandi");
+        extentTest.info("Urun detayindaki begen butonuna tiklandi");
         ReusableMethods.waitFor(2);
         actions.sendKeys(Keys.HOME).perform();
         ReusableMethods.waitFor(1);
@@ -91,7 +91,7 @@ public class HepsiBuradaLogin extends TestBaseRapor {
         actions.moveToElement(hepsiburadaHomePage.secilenUrunBegendiklerim).perform();
         ReusableMethods.waitFor(1);
         actions.click(hepsiburadaHomePage.sepeteEkle).perform();
-        extentTest.info("begenilen urun sepete eklendi");
+        extentTest.info("Begenilen urun sepete eklendi");
         ReusableMethods.waitFor(1);
 
         Assert.assertTrue(hepsiburadaHomePage.sepeteEklendiPopUp.isEnabled());

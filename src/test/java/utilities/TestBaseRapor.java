@@ -26,7 +26,7 @@ public class TestBaseRapor {
 
         extentReports.setSystemInfo("Enviroment","QA");
         extentReports.setSystemInfo("Browser", ConfigReader.getProperty("browser")); // chrome, firefox
-        extentReports.setSystemInfo("Automation Engineer", "Alperen");
+        extentReports.setSystemInfo("Automation Engineer", "Suleyman");
         extentHtmlReporter.config().setDocumentTitle("amazon Arama Testi");
         extentHtmlReporter.config().setReportName("Hepsiburada Automation Reports");
     }
